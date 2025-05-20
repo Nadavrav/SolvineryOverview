@@ -14,33 +14,83 @@
   background-color: #333;
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
-  z-index: 1000; /* Ensures the navbar stays above other content */
+  align-items: center;
+  padding: 15px 0;
+  z-index: 1000;
 }
 
 .btn {
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #45a049;
 }
 
-/* Content below the navbar */
+.btn:focus {
+  outline: none;
+}
+
+/* Content section */
 .content {
-  margin-top: 60px; /* Prevent the content from being hidden behind the navbar */
+  margin-top: 80px; /* Space for navbar */
   padding: 20px;
+  font-family: Arial, sans-serif;
+  
+  /* Flexbox to center the content */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center; /* Center text horizontally */
+  min-height: 100vh; /* Ensure the content div takes at least the full height of the viewport */
 }
 
-h1 {
-  margin-bottom: 20px;
+.home, .about {
+  width: 100%;
+  max-width: 1200px; /* Limit the width of the sections */
+  padding: 20px;
+  margin-bottom: 40px; /* Space between sections */
+  padding-top: 80px; /* Avoid navbar overlap */
 }
 
-p {
-  margin-bottom: 10px;
+/* Home section background */
+.home {
+  background-color: #f4f4f4; /* Light grey background for the home section */
+}
+
+.home h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.home p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* About section background */
+.about {
+  background-color: #e0f7fa; /* Light cyan background for the about section */
+}
+
+.about h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
