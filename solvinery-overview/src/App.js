@@ -23,7 +23,13 @@ function App() {
       <nav className="navbar">
         <button className="btn" onClick={scrollToHome}>HOME</button>
         <button className="btn" onClick={scrollToAbout}>ABOUT</button>
-        <button className="btn">DOCUMENTS</button>
+        <div className="dropdown">
+          <button className="btn">DOCUMENTS</button>
+          <div className="dropdown-content">
+            <button className="dropdown-btn">Doc 1</button>
+            <button className="dropdown-btn">Doc 2</button>
+          </div>
+        </div>
         <button className="btn">MANUALS</button>
         <button className="btn" onClick={openGitRepo}>GIT REPO</button>
       </nav>
@@ -34,7 +40,6 @@ function App() {
         <div id="home" className="home">
           <h1>Welcome to the Home Page</h1>
           <p>This is the home section of your page.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
         </div>
 
         {/* About Section */}
