@@ -21,25 +21,32 @@ function App() {
     <div className="App">
       {/* Sticky menu */}
       <nav className="navbar">
-        <button className="btn" onClick={scrollToHome}>HOME</button>
-        <button className="btn" onClick={scrollToAbout}>ABOUT</button>
+        <button className="btn-98" onClick={scrollToHome}>HOME</button>
+        <button className="btn-98" onClick={scrollToAbout}>ABOUT</button>
         <div className="dropdown">
-          <button className="btn">DOCUMENTS</button>
+          <button className="btn-98">DOCUMENTS</button>
           <div className="dropdown-content">
-            <a href="/docs/ADD.pdf" className="dropdown-btn" download="ADD.pdf">ADD</a>
-            <a href="/docs/ARD.pdf" className="dropdown-btn" download="ARD.pdf">ARD</a>
+            <a href={`${process.env.PUBLIC_URL}/docs/ADD.pdf`} className="dropdown-btn" download="ADD.pdf">ADD</a>
+            <a href={`${process.env.PUBLIC_URL}/docs/ARD.pdf`} className="dropdown-btn" download="ARD.pdf">ARD</a>
           </div>
         </div>
-        <button className="btn">MANUALS</button>
-        <button className="btn" onClick={openGitRepo}>GIT REPO</button>
+        <button className="btn-98">MANUALS</button>
+        <button className="btn-98" onClick={openGitRepo}>GIT REPO</button>
       </nav>
 
       {/* Content to scroll */}
       <div className="content">
         {/* Home Section */}
         <div id="home" className="home">
-          <h1>Welcome to the Home Page</h1>
-          <p>This is the home section of your page.</p>
+          <div className="home-left">
+            <h1>Welcome to the Home Page</h1>
+            <p>This is the home section of your page.</p>
+          </div>
+
+          <div className="home-right">
+            {/* Displaying the MainLogo.png image */}
+            <img src={`${process.env.PUBLIC_URL}/MainLogo.png`} alt="Main Logo" className="main-logo" />
+          </div>
         </div>
 
         {/* About Section */}
