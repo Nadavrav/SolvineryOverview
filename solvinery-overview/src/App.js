@@ -12,6 +12,11 @@ function App() {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Function to scroll to the Documents section
+  const scrollToDocuments = () => {
+    document.getElementById('documents').scrollIntoView({ behavior: 'smooth' });
+  };
+
   // Function to open the GitHub repository
   const openGitRepo = () => {
     window.open('https://github.com/DenisPn/Solvinery', '_blank');
@@ -23,13 +28,7 @@ function App() {
       <nav className="navbar">
         <button className="btn-98" onClick={scrollToHome}>HOME</button>
         <button className="btn-98" onClick={scrollToAbout}>ABOUT</button>
-        <div className="dropdown">
-          <button className="btn-98">DOCUMENTS</button>
-          <div className="dropdown-content">
-            <a href={`${process.env.PUBLIC_URL}/docs/ADD.pdf`} className="dropdown-btn" download="ADD.pdf">ADD</a>
-            <a href={`${process.env.PUBLIC_URL}/docs/ARD.pdf`} className="dropdown-btn" download="ARD.pdf">ARD</a>
-          </div>
-        </div>
+        <button className="btn-98" onClick={scrollToDocuments}>DOCUMENTS</button>
         <button className="btn-98">MANUALS</button>
         <button className="btn-98" onClick={openGitRepo}>GIT REPO</button>
       </nav>
@@ -53,6 +52,37 @@ function App() {
         <div id="about" className="about">
           <h1>About Us</h1>
           <p>This is the about section of your page. Here, you can describe more about the project or website.</p>
+        </div>
+
+        {/* Documents Section */}
+        <div id="documents" className="documents">
+          <h1 className="app-title">Documents & Manuals</h1>
+          <div className="document-list">
+            {/* Document Cards */}
+            <div className="document-card">
+              <div className="document-icon pdf">PDF</div>
+              <h3 className="document-title">ADD</h3>
+              <p className="document-info">Last edited: Today</p>
+              <span className="document-size">4.2 MB</span>
+              <br></br><br></br>
+              <a href={`${process.env.PUBLIC_URL}/docs/ADD.pdf`} className="download-button">
+                <span className="download-icon"></span>
+                Download
+              </a>
+            </div>
+
+            <div className="document-card">
+              <div className="document-icon pdf">PDF</div>
+              <h3 className="document-title">ARD</h3>
+              <p className="document-info">Last edited: Yesterday</p>
+              <span className="document-size">1.8 MB</span>
+              <br></br><br></br>
+              <a href={`${process.env.PUBLIC_URL}/docs/ARD.pdf`} className="download-button">
+                <span className="download-icon"></span>
+                Download
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
