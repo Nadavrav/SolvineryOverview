@@ -82,6 +82,19 @@ function App() {
                 Download
               </a>
             </div>
+
+            <div className="document-card">
+              <div className="document-icon pdf">PDF</div>
+              <h3 className="document-title">Manual</h3>
+              <p className="document-info">Last edited: Today</p>
+              <span className="document-size">4.2 MB</span>
+              <br></br><br></br>
+              <a href={`${process.env.PUBLIC_URL}/docs/ADD.pdf`} className="download-button">
+                <span className="download-icon"></span>
+                Download
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
