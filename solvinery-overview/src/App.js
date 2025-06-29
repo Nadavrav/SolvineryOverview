@@ -22,6 +22,10 @@ function App() {
     window.open('https://github.com/DenisPn/Solvinery', '_blank');
   };
 
+  const openSite = () => {
+    window.open('https://denispn.github.io/Solvinery/', '_blank');
+  };
+
   return (
     <div className="App">
       {/* Sticky menu */}
@@ -29,8 +33,8 @@ function App() {
         <button className="btn-98" onClick={scrollToHome}>HOME</button>
         <button className="btn-98" onClick={scrollToAbout}>ABOUT</button>
         <button className="btn-98" onClick={scrollToDocuments}>DOCUMENTS</button>
-        <button className="btn-98">MANUALS</button>
         <button className="btn-98" onClick={openGitRepo}>GIT REPO</button>
+        <button className="btn-98" onClick={openSite}>SITE</button>
       </nav>
 
       {/* Content to scroll */}
@@ -39,7 +43,8 @@ function App() {
         <div id="home" className="home">
           <div className="home-left">
             <h1>Welcome to the Home Page</h1>
-            <p>This is the home section of your page.</p>
+            <br></br><br></br>
+            <p>The project enables anyone to easily access powerful tools to solve planning problems such as scheduling, task management, and more. Choose a scenario from the shared public library, edit it by enabling or disabling constraints, adjusting priorities, and editing the static data, and send it to the server who uses a powerful engine to find the optimal solution. The project will initially feature a number of select scenarios that will cover many of the most common problems. However, anyone willing to learn how can create a new one from scratch and help expand our ecosystem by sharing it.</p>
           </div>
 
           <div className="home-right">
@@ -51,7 +56,14 @@ function App() {
         {/* About Section */}
         <div id="about" className="about">
           <h1>About Us</h1>
-          <p>This is the about section of your page. Here, you can describe more about the project or website.</p>
+         
+          {/* Embedding the video */}
+          <div className="about-video">
+            <video width="100%" controls>
+              <source src={`${process.env.PUBLIC_URL}/SolvineryVideo.mp4`} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
 
         {/* Documents Section */}
@@ -62,9 +74,8 @@ function App() {
             <div className="document-card">
               <div className="document-icon pdf">PDF</div>
               <h3 className="document-title">ADD</h3>
-              <p className="document-info">Last edited: Today</p>
-              <span className="document-size">4.2 MB</span>
-              <br></br><br></br>
+              <span className="document-size">1.19 MB</span>
+              <br /><br />
               <a href={`${process.env.PUBLIC_URL}/docs/ADD.pdf`} className="download-button">
                 <span className="download-icon"></span>
                 Download
@@ -74,9 +85,8 @@ function App() {
             <div className="document-card">
               <div className="document-icon pdf">PDF</div>
               <h3 className="document-title">ARD</h3>
-              <p className="document-info">Last edited: Yesterday</p>
-              <span className="document-size">1.8 MB</span>
-              <br></br><br></br>
+              <span className="document-size">160 KB</span>
+              <br /><br />
               <a href={`${process.env.PUBLIC_URL}/docs/ARD.pdf`} className="download-button">
                 <span className="download-icon"></span>
                 Download
@@ -86,10 +96,9 @@ function App() {
             <div className="document-card">
               <div className="document-icon pdf">PDF</div>
               <h3 className="document-title">Manual</h3>
-              <p className="document-info">Last edited: Today</p>
-              <span className="document-size">4.2 MB</span>
-              <br></br><br></br>
-              <a href={`${process.env.PUBLIC_URL}/docs/ADD.pdf`} className="download-button">
+              <span className="document-size">72 KB</span>
+              <br /><br />
+              <a href={`${process.env.PUBLIC_URL}/docs/Manual.pdf`} className="download-button">
                 <span className="download-icon"></span>
                 Download
               </a>
