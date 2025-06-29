@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/SolvineryOverview/static/css/main.7ce290c1.css",
-    "main.js": "/SolvineryOverview/static/js/main.e6399b03.js",
+    "main.js": "/SolvineryOverview/static/js/main.c351942b.js",
     "static/js/453.c2b9d408.chunk.js": "/SolvineryOverview/static/js/453.c2b9d408.chunk.js",
     "index.html": "/SolvineryOverview/index.html",
     "main.7ce290c1.css.map": "/SolvineryOverview/static/css/main.7ce290c1.css.map",
-    "main.e6399b03.js.map": "/SolvineryOverview/static/js/main.e6399b03.js.map",
+    "main.c351942b.js.map": "/SolvineryOverview/static/js/main.c351942b.js.map",
     "453.c2b9d408.chunk.js.map": "/SolvineryOverview/static/js/453.c2b9d408.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7ce290c1.css",
-    "static/js/main.e6399b03.js"
+    "static/js/main.c351942b.js"
   ]
 }
